@@ -1,2 +1,2 @@
 # J.A.R.V.I.S
-This is a voice assisted desktop assistant called J.A.R.V.I.S,developed using python language."pyttsx3" and "speech recognition" are some of the libraries used in this project.
+This is a voice assisted desktop assistant called J.A.R.V.I.S,developed using python language."pyttsx3" and "speech recognition" are some of the libraries used in this project.It can perform basic operations such as opening Google website, Amazon homepage, Amazon prime homepage, Gmail.com, Hackerrank.com, Freecodecamp.org , Hackerrank and stackoverflow website.It can also search for information on Wikipedia .
