@@ -97,6 +97,9 @@ if __name__ == "__main__":
             codePath="C:\\Users\\abhis\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
         
+        elif 'shutdown' in query:
+            speak("shutting down")
+        
         
 
 
