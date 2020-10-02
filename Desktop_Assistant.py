@@ -9,7 +9,7 @@ import googlesearch
 import bs4
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen
-
+import time
 
 # Code for using microsoft voice for Voice Assistant
 engine = pyttsx3.init('sapi5')
@@ -82,11 +82,21 @@ if __name__ == "__main__":
             print(results)
             speak(results)
 
-
+        
+        elif 'hi' in query or 'hello' in query:
+            speak('Hello sir, how can I help you?')
+        
+        elif 'thanks' in query or 'thank you' in query:
+            speak('My pleasure, is there any other way I could help you?')
+        
+        elif 'bye' in query:
+            speak('Bye sir, stay safe')
+            break
+        
         elif 'youtube' in query:
             speak("opening youtube")
             webbrowser.open("youtube.com")
-
+        
         elif 'open google' in query:
             speak("opening google")
             webbrowser.open("google.com")
@@ -213,7 +223,20 @@ if __name__ == "__main__":
             speak("Thank you very much for your time. Good Bye.")
             exit()
 
+        elif 'timer' in query or 'stopwatch' in query:
             
+            speak("For how many minutes?")
+            time_wait = takeCommand()
+            time_wait = time_wait.replace('minutes', '')
+            time_wait = time_wait.replace('minute', '')
+            time_wait = time_wait.replace('for', '')
+            time_wait = float(time_wait)
+            time_wait = time_wait * 60
+            speak(f'I will remind you in {time_wait} seconds')
+
+            time.sleep(time_wait)
+            speak('Your time has been finished sir')
+
         # Code for sending email
         elif 'email' in query or 'mail' in query:
             try:
